@@ -21,10 +21,10 @@ test:
 
 production_default: &production_default
   <<: *default
-  port: 5432
+  port: <%= ENV["PROD_DATABASE_PORT"] %>
   password: <%= ENV["PROD_DATABASE_PASSWORD"] %>
-  host: "aws-1-us-east-1.pooler.supabase.com"
-  username: "postgres.hktsvlfccpeszvfwzilb"
+  host: <%= ENV["PROD_DATABASE_HOST"] %>
+  username: <%= ENV["PROD_DATABASE_USERNAME"] %>
 
 production:
   primary:
