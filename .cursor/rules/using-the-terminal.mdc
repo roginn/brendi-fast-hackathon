@@ -1,0 +1,5 @@
+---
+globs: backend/**/*
+alwaysApply: false
+---
+When using the terminal in the backend directory, always run `rvm use` in directory `backend` before running any rails or ruby commands in `brendi_manager` directory.
